@@ -9,8 +9,8 @@ public class ConnectionFactory {
 		try {
 			return DriverManager.getConnection(
 					"jdbc:mysql://localhost/vnuk_personnel", 
-					"root", 
-					"Mquan123"
+					System.getenv("db_user"), 
+					System.getenv("db_password")
 			);
 		}
 		catch (SQLException e) {
